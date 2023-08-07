@@ -1,0 +1,40 @@
+<%- include('header') %>
+
+<main>
+    <div class="container">
+        <section>
+            <h2>About Us</h2>
+            <p>Our free todo app is designed to help you keep track of all the things you need to do in a simple and intuitive way. Whether you need to remember to buy groceries, finish a project for work, or make a doctor's appointment, our app has got you covered.</p>
+            <p>We're a small team of developers who are passionate about creating apps that help people live better lives. We believe that everyone should have access to the tools they need to be productive and organized, without having to pay a fortune for them.</p>
+        </section>
+        <section>
+            <h2>Our Team</h2>
+            <div class="team-member">
+                <img src="img/bijay.png" alt="Bijay Prasad">
+                <h3>Bijay Prasad</h3>
+                <p>Software Developer</p>
+            </div>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <form action="mailto:bijayprasad.business@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <input class="send" type="submit" value="Send">
+            </form>
+        </section>
+    </div>
+</main>
+<script>
+    document.querySelector(".send").addEventListener("click", function() {
+        setTimeout(() => {
+            document.location.reload();
+        }, 3000);
+    });
+</script>
+
+<%- include('footer') %>

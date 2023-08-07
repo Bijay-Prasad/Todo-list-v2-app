@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a simple todo app built with Node.js, express.js and using ejs templating.">
+    <meta name="theme-color" content="#A683E3">
+    <title>To Do List | <%= titleHead %></title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">Todo</a>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <!-- <li><a href="/Work">Work</a></li> -->
+          <li><a href="/About">About</a></li>
+        </ul>
+    </header>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        });
+    </script>
