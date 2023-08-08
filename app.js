@@ -60,6 +60,11 @@ app.get('/', function(req, res){
     });
 });
 
+app.get('/about', function(req, res){
+    res.render('about',{titleHead: "About"});
+});
+
+
 app.get("/:customListName", function(req, res) {
     const customListName = _.capitalize(req.params.customListName);
 
@@ -118,10 +123,6 @@ app.post("/delete", function(req, res) {
             res.redirect('/' + listName);
         });
     }
-});
-
-app.get('/about', function(req, res){
-    res.render('about',{titleHead: "About"});
 });
 
 let port = process.env.PORT;
